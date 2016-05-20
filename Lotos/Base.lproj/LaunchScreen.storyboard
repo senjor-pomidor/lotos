@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +14,57 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="x3N-7g-VPa">
+                                <rect key="frame" x="35" y="115" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="TLL-cM-NTY"/>
+                                    <constraint firstAttribute="width" constant="250" id="hxw-Wv-n8w"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Йога-центр" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWP-qp-NQ0">
+                                <rect key="frame" x="35" y="365" width="250" height="29"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ЛОТОС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hef-cv-kWS">
+                                <rect key="frame" x="35" y="394" width="250" height="80"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="66"/>
+                                <color key="textColor" red="0.9137254901960784" green="0.43137254901960786" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x3N-7g-VPa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3cC-Mf-Tw5"/>
+                            <constraint firstItem="sWP-qp-NQ0" firstAttribute="trailing" secondItem="x3N-7g-VPa" secondAttribute="trailing" id="7ff-DI-bjU"/>
+                            <constraint firstItem="Hef-cv-kWS" firstAttribute="leading" secondItem="sWP-qp-NQ0" secondAttribute="leading" id="LBN-xq-0PC"/>
+                            <constraint firstItem="x3N-7g-VPa" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="30" id="M85-bz-6L7"/>
+                            <constraint firstItem="Hef-cv-kWS" firstAttribute="top" secondItem="sWP-qp-NQ0" secondAttribute="bottom" id="MT2-mY-rWL"/>
+                            <constraint firstItem="sWP-qp-NQ0" firstAttribute="leading" secondItem="x3N-7g-VPa" secondAttribute="leading" id="b9d-BL-Dl9"/>
+                            <constraint firstItem="sWP-qp-NQ0" firstAttribute="top" secondItem="x3N-7g-VPa" secondAttribute="bottom" id="cxr-Tk-Gij"/>
+                            <constraint firstItem="x3N-7g-VPa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eBJ-Ia-wso"/>
+                            <constraint firstItem="x3N-7g-VPa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mKT-Dq-6pM"/>
+                            <constraint firstItem="Hef-cv-kWS" firstAttribute="trailing" secondItem="sWP-qp-NQ0" secondAttribute="trailing" id="ssH-7H-a3E"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3cC-Mf-Tw5"/>
+                                <exclude reference="M85-bz-6L7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="2781" height="2422"/>
+    </resources>
 </document>

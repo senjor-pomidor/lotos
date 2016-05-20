@@ -6,6 +6,5 @@
 target 'Lotos' do
     pod 'ChameleonFramework/Swift'
     pod 'Alamofire', '~> 3.3.0'
-    
 end
 
