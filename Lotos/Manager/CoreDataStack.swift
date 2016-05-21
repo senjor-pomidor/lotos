@@ -50,7 +50,7 @@ class CoreDataStack {
     
     func deleteEntity(entityName: String) {
         let fr = NSFetchRequest(entityName: entityName)
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fr.sortDescriptors = [sortDescriptor]
         let frc = NSFetchedResultsController(fetchRequest: fr, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         do {

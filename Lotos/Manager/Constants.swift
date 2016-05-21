@@ -9,4 +9,7 @@ class Constants: NSObject {
     
 //    static let DataIsLoaded = "DATA_IS_LOADED"
     static let flagTrainersIsLoaded = "TRAINER_IS_LOADED"
+    
+    //DB Entity names
+    static let entityTrainer = "Trainer"
 }

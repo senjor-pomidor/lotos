@@ -10,7 +10,6 @@
 		8492F81778008372FB9EC25F /* Pods_Lotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B639DD2D431D50832F6EB7 /* Pods_Lotos.framework */; };
 		E460E1E11CEB7F98001DAFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DB1CEB7F98001DAFDC /* Constants.swift */; };
 		E460E1E21CEB7F98001DAFDC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */; };
-		E460E1E31CEB7F98001DAFDC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DD1CEB7F98001DAFDC /* DataManager.swift */; };
 		E460E1E41CEB7F98001DAFDC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DE1CEB7F98001DAFDC /* FileManager.swift */; };
 		E460E1E51CEB7F98001DAFDC /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DF1CEB7F98001DAFDC /* NetManager.swift */; };
 		E460E1E61CEB7F98001DAFDC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1E01CEB7F98001DAFDC /* UserDefaultsManager.swift */; };
@@ -22,9 +21,11 @@
 		E4643A351CDFE58900811E3C /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4643A341CDFE58900811E3C /* AnimationViewController.swift */; };
 		E48566EB1CEF7C6C003FF85E /* Lotos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48566E91CEF7C6C003FF85E /* Lotos.xcdatamodeld */; };
 		E48566ED1CEF8C0D003FF85E /* TrainersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566EC1CEF8C0D003FF85E /* TrainersTableViewController.swift */; };
-		E48566EF1CEF92DF003FF85E /* LotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566EE1CEF92DF003FF85E /* LotosApi.swift */; };
 		E48566F31CEF9861003FF85E /* Trainer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */; };
 		E48566F41CEF9861003FF85E /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566F21CEF9861003FF85E /* Trainer.swift */; };
+		E48A0C901CF08FDA00D31630 /* LotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */; };
+		E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */; };
+		E48A0C951CF09E4B00D31630 /* ImageViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,6 @@
 		B9B639DD2D431D50832F6EB7 /* Pods_Lotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E460E1DB1CEB7F98001DAFDC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		E460E1DD1CEB7F98001DAFDC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E460E1DE1CEB7F98001DAFDC /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		E460E1DF1CEB7F98001DAFDC /* NetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		E460E1E01CEB7F98001DAFDC /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
@@ -47,9 +47,11 @@
 		E4643A341CDFE58900811E3C /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		E48566EA1CEF7C6C003FF85E /* Lotos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lotos.xcdatamodel; sourceTree = "<group>"; };
 		E48566EC1CEF8C0D003FF85E /* TrainersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainersTableViewController.swift; sourceTree = "<group>"; };
-		E48566EE1CEF92DF003FF85E /* LotosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotosApi.swift; sourceTree = "<group>"; };
 		E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trainer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E48566F21CEF9861003FF85E /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotosApi.swift; sourceTree = "<group>"; };
+		E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +88,9 @@
 			children = (
 				E460E1DB1CEB7F98001DAFDC /* Constants.swift */,
 				E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */,
-				E460E1DD1CEB7F98001DAFDC /* DataManager.swift */,
 				E460E1DE1CEB7F98001DAFDC /* FileManager.swift */,
 				E460E1DF1CEB7F98001DAFDC /* NetManager.swift */,
 				E460E1E01CEB7F98001DAFDC /* UserDefaultsManager.swift */,
-				E48566EE1CEF92DF003FF85E /* LotosApi.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -116,6 +116,7 @@
 		E4643A191CDFE08F00811E3C /* Lotos */ = {
 			isa = PBXGroup;
 			children = (
+				E48A0C911CF09A0700D31630 /* Classes */,
 				E460E1DA1CEB7F4C001DAFDC /* Manager */,
 				E4643A311CDFE53F00811E3C /* Controllers */,
 				E48566F01CEF97F0003FF85E /* Model */,
@@ -142,10 +143,20 @@
 		E48566F01CEF97F0003FF85E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */,
 				E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */,
 				E48566F21CEF9861003FF85E /* Trainer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E48A0C911CF09A0700D31630 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */,
+				E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,17 +281,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E48566EF1CEF92DF003FF85E /* LotosApi.swift in Sources */,
 				E460E1E11CEB7F98001DAFDC /* Constants.swift in Sources */,
 				E48566EB1CEF7C6C003FF85E /* Lotos.xcdatamodeld in Sources */,
 				E48566F41CEF9861003FF85E /* Trainer.swift in Sources */,
 				E4643A331CDFE54E00811E3C /* MainTableViewController.swift in Sources */,
+				E48A0C901CF08FDA00D31630 /* LotosApi.swift in Sources */,
 				E48566F31CEF9861003FF85E /* Trainer+CoreDataProperties.swift in Sources */,
-				E460E1E31CEB7F98001DAFDC /* DataManager.swift in Sources */,
 				E460E1E51CEB7F98001DAFDC /* NetManager.swift in Sources */,
+				E48A0C951CF09E4B00D31630 /* ImageViewTools.swift in Sources */,
 				E460E1E21CEB7F98001DAFDC /* CoreDataStack.swift in Sources */,
 				E48566ED1CEF8C0D003FF85E /* TrainersTableViewController.swift in Sources */,
 				E460E1E61CEB7F98001DAFDC /* UserDefaultsManager.swift in Sources */,
+				E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */,
 				E4643A1B1CDFE08F00811E3C /* AppDelegate.swift in Sources */,
 				E4643A351CDFE58900811E3C /* AnimationViewController.swift in Sources */,
 				E460E1E41CEB7F98001DAFDC /* FileManager.swift in Sources */,
