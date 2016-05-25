@@ -34,7 +34,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXa-aT-HSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456" y="-49"/>
+            <point key="canvasLocation" x="1293" y="107"/>
         </scene>
         <!--Animation View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="518"/>
+            <point key="canvasLocation" x="838" y="642"/>
         </scene>
         <!--Trainers Table View Controller-->
         <scene sceneID="qlx-1X-soY">
@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ghW-60-rOd">
-                                            <rect key="frame" x="5" y="5" width="48" height="48"/>
+                                            <rect key="frame" x="15" y="5" width="48" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="R77-w3-8v9"/>
                                                 <constraint firstAttribute="width" constant="48" id="aXu-Yv-mnf"/>
@@ -96,15 +96,15 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-ly-Vyj">
-                                            <rect key="frame" x="64" y="19" width="246" height="22"/>
+                                            <rect key="frame" x="74" y="19" width="236" height="22"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Sq-BPs">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Sq-BPs">
                                             <rect key="frame" x="290" y="3" width="27" height="17"/>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -112,7 +112,7 @@
                                         <constraint firstItem="5cf-ly-Vyj" firstAttribute="centerY" secondItem="0vv-BD-WAI" secondAttribute="centerY" id="0iJ-Ui-lii"/>
                                         <constraint firstAttribute="trailing" secondItem="x16-Sq-BPs" secondAttribute="trailing" constant="3" id="YDK-3h-aMi"/>
                                         <constraint firstItem="ghW-60-rOd" firstAttribute="top" secondItem="0vv-BD-WAI" secondAttribute="top" constant="5" id="YLJ-oc-u8Z"/>
-                                        <constraint firstItem="ghW-60-rOd" firstAttribute="leading" secondItem="0vv-BD-WAI" secondAttribute="leading" constant="5" id="fIV-ux-I1E"/>
+                                        <constraint firstItem="ghW-60-rOd" firstAttribute="leading" secondItem="0vv-BD-WAI" secondAttribute="leading" constant="15" id="fIV-ux-I1E"/>
                                         <constraint firstAttribute="trailing" secondItem="5cf-ly-Vyj" secondAttribute="trailing" constant="10" id="hId-An-eIb"/>
                                         <constraint firstItem="x16-Sq-BPs" firstAttribute="top" secondItem="0vv-BD-WAI" secondAttribute="top" constant="3" id="iPu-md-iJM"/>
                                         <constraint firstItem="5cf-ly-Vyj" firstAttribute="leading" secondItem="ghW-60-rOd" secondAttribute="trailing" constant="11" id="vo6-Qb-aEo"/>
@@ -134,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlC-SV-ytD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="1130"/>
+            <point key="canvasLocation" x="838" y="1215"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SIF-V9-NJX">
@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxe-GS-iij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="1125"/>
+            <point key="canvasLocation" x="7" y="1215"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="prR-KK-Bi2">
@@ -205,7 +205,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25s-DQ-u0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="-49"/>
+            <point key="canvasLocation" x="838" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pV1-5L-YAh">
@@ -225,7 +225,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evz-cE-M4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="1130"/>
+            <point key="canvasLocation" x="393" y="1215"/>
         </scene>
     </scenes>
     <resources>

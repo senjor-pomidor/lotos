@@ -26,6 +26,8 @@
 		E48A0C901CF08FDA00D31630 /* LotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */; };
 		E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */; };
 		E48A0C951CF09E4B00D31630 /* ImageViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */; };
+		E48A0C981CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */; };
+		E48A0C991CF1FD6A00D31630 /* TngItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C971CF1FD6A00D31630 /* TngItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotosApi.swift; sourceTree = "<group>"; };
 		E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewTools.swift; sourceTree = "<group>"; };
+		E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TngItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E48A0C971CF1FD6A00D31630 /* TngItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TngItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		E48566F01CEF97F0003FF85E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */,
+				E48A0C971CF1FD6A00D31630 /* TngItem.swift */,
 				E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */,
 				E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */,
 				E48566F21CEF9861003FF85E /* Trainer.swift */,
@@ -293,9 +299,11 @@
 				E48566ED1CEF8C0D003FF85E /* TrainersTableViewController.swift in Sources */,
 				E460E1E61CEB7F98001DAFDC /* UserDefaultsManager.swift in Sources */,
 				E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */,
+				E48A0C981CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift in Sources */,
 				E4643A1B1CDFE08F00811E3C /* AppDelegate.swift in Sources */,
 				E4643A351CDFE58900811E3C /* AnimationViewController.swift in Sources */,
 				E460E1E41CEB7F98001DAFDC /* FileManager.swift in Sources */,
+				E48A0C991CF1FD6A00D31630 /* TngItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

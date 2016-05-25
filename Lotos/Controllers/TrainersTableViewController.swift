@@ -43,15 +43,16 @@ extension TrainersTableViewController {
         let item = frc.objectAtIndexPath(indexPath) as! Trainer
         
         cell.nameLabel.text = item.name
-        cell.idLabel.text = item.id
-        if let localImage: UIImage = FileManager.loadLocalImage(item.id!) {
+        let itemId: String = String(item.id)
+        cell.idLabel.text = itemId
+        if let localImage: UIImage = FileManager.loadLocalImage(itemId) {
             dispatch_async(dispatch_get_main_queue(), {
                 cell.avatarImageView.image = localImage
             })
         } else {
             cell.avatarImageView.loadAndCropToSquare(item.photoURL, complited: { () in
                 if let imageToSave = cell.avatarImageView.image,
-                   let fileName = item.id {
+                    let fileName: String = itemId  {
                     FileManager.saveImage(imageToSave, withName: fileName)
                 } else {
                     cell.avatarImageView.image = UIImage(named: "no_photo")
@@ -95,7 +96,7 @@ extension TrainersTableViewController {
         fetchRequest.fetchBatchSize = 20
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext , sectionNameKeyPath: nil, cacheName: "GAME_ITEM_CASH")
+        frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext , sectionNameKeyPath: nil, cacheName: "TRAINER_CACHE")
         do {
             try frc.performFetch()
             self.tableView.reloadData()
@@ -107,8 +108,7 @@ extension TrainersTableViewController {
     
     func setPullRefreshControll() {
         self.refreshControl = UIRefreshControl()
-//        self.refreshControl!.attributedTitle = NSAttributedString(string: "Refresh")
-        self.refreshControl!.addTarget(self, action: Selector("refreshTrainers:"), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl!.addTarget(self, action: #selector(TrainersTableViewController.refreshTrainers(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl!) // not required when using UITableViewController
     }
     
