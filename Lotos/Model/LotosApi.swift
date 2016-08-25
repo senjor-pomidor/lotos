@@ -36,6 +36,32 @@ class LotosApi: NSObject {
             print("Error \(error.localizedDescription)")
         }
     }
+    
+    class func loadSchedule(context: NSManagedObjectContext, complition: Complition) {
+        NetManager.getJSONData(Constants.schedulesURL) { (success: NSArray?, failure: NSError?) in
+            LotosApi.importSchedule(success!, intoManagedObjectContext: context)
+            complition()
+        }
+    }
+
+    class func importSchedule(scheduleItems: NSArray, intoManagedObjectContext context: NSManagedObjectContext) {
+        for item in scheduleItems {
+            let itemValue  = NSEntityDescription.insertNewObjectForEntityForName("TngItem", inManagedObjectContext: context) as! Trainer
+            
+//            if let nameValue = item["name"] as? String,
+//                let trainerIdValue = item["trainer_id"] as? NSNumber,
+//                let photoURL = item["photo"] as? String {
+//                itemValue.name = nameValue
+//                itemValue.id =  trainerIdValue.intValue
+//                itemValue.photoURL = Constants.serverURL + photoURL
+//            }
+        }
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Error \(error.localizedDescription)")
+        }
+    }
 
 }
 

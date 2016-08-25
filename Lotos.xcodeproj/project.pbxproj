@@ -147,10 +147,10 @@
 		E48566F01CEF97F0003FF85E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */,
-				E48A0C971CF1FD6A00D31630 /* TngItem.swift */,
 				E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */,
 				E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */,
+				E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */,
+				E48A0C971CF1FD6A00D31630 /* TngItem.swift */,
 				E48566F21CEF9861003FF85E /* Trainer.swift */,
 			);
 			path = Model;

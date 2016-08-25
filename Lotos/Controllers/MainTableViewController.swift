@@ -1,11 +1,3 @@
-//
-//  MainTableViewController.swift
-//  Lotos
-//
-//  Created by Andrey Torlopov on 09/05/16.
-//  Copyright © 2016 Andrey Torlopov. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
@@ -24,7 +16,6 @@ extension MainTableViewController {
         setup()
         reloadFetchedResultsController()
     }
-    
 }
 
 
@@ -63,14 +54,14 @@ extension MainTableViewController {
         assert(self.coreDataStack != nil, "CoreDataStack can not be nil")
         self.title = "Расписание"
         setPullRefreshControll()
-        if !UserDefaultsManager.bool(Constants.flagTrainersIsLoaded) {
-            loadTrainers()
+        if !UserDefaultsManager.bool(Constants.flagScheduleIsLoaded) {
+            loadSchedule()
         }
     }
     
-    func loadTrainers() {
-        LotosApi.loadTrainers(managedObjectContext, complition: {
-            UserDefaultsManager.setBool(Constants.flagTrainersIsLoaded, value: true)
+    func loadSchedule() {
+        LotosApi.loadSchedule(managedObjectContext, complition: {
+            UserDefaultsManager.setBool(Constants.flagScheduleIsLoaded, value: true)
             self.reloadFetchedResultsController()
         })
     }
@@ -79,9 +70,10 @@ extension MainTableViewController {
         frc = nil
         let fetchRequest = NSFetchRequest(entityName: Constants.entityTrainer)
         fetchRequest.fetchBatchSize = 20
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext , sectionNameKeyPath: nil, cacheName: "TRN_CACHE")
+        let sortDescriptorDate = NSSortDescriptor(key: "date", ascending: true)
+        let sortDescriptorTime = NSSortDescriptor(key: "time", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptorDate,sortDescriptorTime]
+        frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext , sectionNameKeyPath: nil, cacheName: "SCHDL_CACHE")
         do {
             try frc.performFetch()
             self.tableView.reloadData()
@@ -102,7 +94,7 @@ extension MainTableViewController {
         coreDataStack.deleteEntity(Constants.entityTrainer)
         coreDataStack.save()
         FileManager.deleteFilesInDirectory(FileManager.userDirectory())
-        self.loadTrainers()
+        self.loadSchedule()
     }
     
 }

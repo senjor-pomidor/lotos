@@ -12,20 +12,30 @@ import CoreData
 
 //MARK:- properties
 class TrainersTableViewController: UITableViewController {
+    
     var managedObjectContext: NSManagedObjectContext!
     var frc: NSFetchedResultsController!
     var coreDataStack: CoreDataStack!
+    
 }
+
+
 
 //MARK:- lifecycle
 extension TrainersTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        *** test! ***
 //        UserDefaultsManager.setBool(Constants.flagTrainersIsLoaded, value: false)
+//        *************
+        
         setup()
         reloadFetchedResultsController()
     }
 }
+
+
 
 //MARK:- tableview datasource/delegate
 extension TrainersTableViewController {
@@ -66,6 +76,8 @@ extension TrainersTableViewController {
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
+
+
 
 //MARK:- logic
 extension TrainersTableViewController {
@@ -120,3 +132,6 @@ extension TrainersTableViewController {
         self.loadTrainers()
     }
 }
+
+
+

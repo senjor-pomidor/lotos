@@ -7,7 +7,6 @@ class Constants: NSObject {
     static let trainersURL = Constants.serverURL + "/api/v1/trainers"
     static let schedulesURL = Constants.serverURL + "/api/v1/schedules"
     
-    
     static let flagTrainersIsLoaded = "TRAINER_IS_LOADED"
     static let flagScheduleIsLoaded = "SCHEDULE_IS_LOADED"
     
