@@ -12,26 +12,17 @@ import CoreData
 
 //MARK:- properties
 class TrainersTableViewController: UITableViewController {
-    
-    var managedObjectContext: NSManagedObjectContext!
-    var frc: NSFetchedResultsController!
-    var coreDataStack: CoreDataStack!
-    
+    var dataSource = [Trainer]()
 }
 
 
 
 //MARK:- lifecycle
 extension TrainersTableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        *** test! ***
-//        UserDefaultsManager.setBool(Constants.flagTrainersIsLoaded, value: false)
-//        *************
-        
         setup()
-        reloadFetchedResultsController()
     }
 }
 
@@ -39,36 +30,15 @@ extension TrainersTableViewController {
 
 //MARK:- tableview datasource/delegate
 extension TrainersTableViewController {
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return frc.sections!.count
-    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sections: protocol<NSFetchedResultsSectionInfo> = self.frc.sections![section];
-        return sections.numberOfObjects
+        return dataSource.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomTableViewCell
-        let item = frc.objectAtIndexPath(indexPath) as! Trainer
-        
-        cell.nameLabel.text = item.name
-        let itemId: String = String(item.id)
-        cell.idLabel.text = itemId
-        if let localImage: UIImage = FileManager.loadLocalImage(itemId) {
-            dispatch_async(dispatch_get_main_queue(), {
-                cell.avatarImageView.image = localImage
-            })
-        } else {
-            cell.avatarImageView.loadAndCropToSquare(item.photoURL, complited: { () in
-                if let imageToSave = cell.avatarImageView.image,
-                    let fileName: String = itemId  {
-                    FileManager.saveImage(imageToSave, withName: fileName)
-                } else {
-                    cell.avatarImageView.image = UIImage(named: "no_photo")
-                }
-            })
-        }        
+        let trainer = dataSource[indexPath.row]
+        cell.nameLabel.text = trainer.name
         return cell
     }
     
@@ -82,12 +52,6 @@ extension TrainersTableViewController {
 //MARK:- logic
 extension TrainersTableViewController {
     func setup() {
-        if let appDelegate = (UIApplication.sharedApplication().delegate as? AppDelegate) {
-            self.coreDataStack = appDelegate.coreDataStack
-            self.managedObjectContext = appDelegate.coreDataStack.managedObjectContext
-        }
-        assert(self.managedObjectContext != nil, "ManagedObjectContext can not be nil")
-        assert(self.coreDataStack != nil, "CoreDataStack can not be nil")
         self.title = "Инструкторы"
         setPullRefreshControll()
         if !UserDefaultsManager.bool(Constants.flagTrainersIsLoaded) {
@@ -96,25 +60,13 @@ extension TrainersTableViewController {
     }
     
     func loadTrainers() {
-        LotosApi.loadTrainers(managedObjectContext, complition: { 
+        LotosApi.loadTrainers {[unowned self] (array) in
+            
             UserDefaultsManager.setBool(Constants.flagTrainersIsLoaded, value: true)
-            self.reloadFetchedResultsController()
-        })
-    }
-    
-    func reloadFetchedResultsController() {
-        frc = nil
-        let fetchRequest = NSFetchRequest(entityName: Constants.entityTrainer)
-        fetchRequest.fetchBatchSize = 20
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext , sectionNameKeyPath: nil, cacheName: "TRAINER_CACHE")
-        do {
-            try frc.performFetch()
-            self.tableView.reloadData()
+            self.dataSource = (array as? [Trainer])!
+            
             self.refreshControl?.endRefreshing()
-        } catch let error as NSError {
-            print("error: \(error.localizedDescription)")
+            self.tableView.reloadData()
         }
     }
     
@@ -126,8 +78,6 @@ extension TrainersTableViewController {
     
     func refreshTrainers(sender: AnyObject) {
         print("refresh")
-        coreDataStack.deleteEntity(Constants.entityTrainer)
-        coreDataStack.save()
         FileManager.deleteFilesInDirectory(FileManager.userDirectory())
         self.loadTrainers()
     }

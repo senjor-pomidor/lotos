@@ -4,8 +4,7 @@ import Foundation
 import CoreData
 
 class CoreDataStack {
-    let modelName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String
-    
+    let modelName = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String    
     private lazy var  appDocDir: NSURL =  {
        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains:.UserDomainMask)
         return urls[urls.count - 1]

@@ -7,11 +7,16 @@
 //
 
 import Foundation
-import CoreData
 
 
-class Trainer: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class Trainer {
+    let id: Int32
+    let name: String
+    let photoURL: String
+    init(id: Int32, name: String, photoURL: String) {
+        self.id = id
+        self.name = name
+        self.photoURL = photoURL
+    }
 }
+

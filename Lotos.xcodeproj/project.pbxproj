@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8492F81778008372FB9EC25F /* Pods_Lotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B639DD2D431D50832F6EB7 /* Pods_Lotos.framework */; };
+		A445D3791D905DCB00C2FFEA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445D3781D905DCB00C2FFEA /* Database.swift */; };
 		E460E1E11CEB7F98001DAFDC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DB1CEB7F98001DAFDC /* Constants.swift */; };
 		E460E1E21CEB7F98001DAFDC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */; };
 		E460E1E41CEB7F98001DAFDC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460E1DE1CEB7F98001DAFDC /* FileManager.swift */; };
@@ -21,18 +22,17 @@
 		E4643A351CDFE58900811E3C /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4643A341CDFE58900811E3C /* AnimationViewController.swift */; };
 		E48566EB1CEF7C6C003FF85E /* Lotos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E48566E91CEF7C6C003FF85E /* Lotos.xcdatamodeld */; };
 		E48566ED1CEF8C0D003FF85E /* TrainersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566EC1CEF8C0D003FF85E /* TrainersTableViewController.swift */; };
-		E48566F31CEF9861003FF85E /* Trainer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */; };
 		E48566F41CEF9861003FF85E /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48566F21CEF9861003FF85E /* Trainer.swift */; };
 		E48A0C901CF08FDA00D31630 /* LotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */; };
 		E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */; };
 		E48A0C951CF09E4B00D31630 /* ImageViewTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */; };
-		E48A0C981CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */; };
 		E48A0C991CF1FD6A00D31630 /* TngItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A0C971CF1FD6A00D31630 /* TngItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D9B967249D41EDA330CC83B /* Pods-Lotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lotos/Pods-Lotos.debug.xcconfig"; sourceTree = "<group>"; };
 		696E7F8D8C147CE8717B2BA2 /* Pods-Lotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lotos/Pods-Lotos.release.xcconfig"; sourceTree = "<group>"; };
+		A445D3781D905DCB00C2FFEA /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		B9B639DD2D431D50832F6EB7 /* Pods_Lotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E460E1DB1CEB7F98001DAFDC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -49,12 +49,10 @@
 		E4643A341CDFE58900811E3C /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		E48566EA1CEF7C6C003FF85E /* Lotos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lotos.xcdatamodel; sourceTree = "<group>"; };
 		E48566EC1CEF8C0D003FF85E /* TrainersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainersTableViewController.swift; sourceTree = "<group>"; };
-		E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trainer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E48566F21CEF9861003FF85E /* Trainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LotosApi.swift; sourceTree = "<group>"; };
 		E48A0C921CF09A1D00D31630 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E48A0C941CF09E4B00D31630 /* ImageViewTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewTools.swift; sourceTree = "<group>"; };
-		E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TngItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E48A0C971CF1FD6A00D31630 /* TngItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TngItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +88,7 @@
 		E460E1DA1CEB7F4C001DAFDC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A445D3781D905DCB00C2FFEA /* Database.swift */,
 				E460E1DB1CEB7F98001DAFDC /* Constants.swift */,
 				E460E1DC1CEB7F98001DAFDC /* CoreDataStack.swift */,
 				E460E1DE1CEB7F98001DAFDC /* FileManager.swift */,
@@ -125,10 +124,10 @@
 				E4643A311CDFE53F00811E3C /* Controllers */,
 				E48566F01CEF97F0003FF85E /* Model */,
 				E4643A241CDFE08F00811E3C /* Assets.xcassets */,
+				E4643A1A1CDFE08F00811E3C /* AppDelegate.swift */,
 				E4643A1E1CDFE08F00811E3C /* Main.storyboard */,
 				E4643A261CDFE08F00811E3C /* LaunchScreen.storyboard */,
 				E48566E91CEF7C6C003FF85E /* Lotos.xcdatamodeld */,
-				E4643A1A1CDFE08F00811E3C /* AppDelegate.swift */,
 				E4643A291CDFE08F00811E3C /* Info.plist */,
 			);
 			path = Lotos;
@@ -148,8 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				E48A0C8F1CF08FDA00D31630 /* LotosApi.swift */,
-				E48566F11CEF9861003FF85E /* Trainer+CoreDataProperties.swift */,
-				E48A0C961CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift */,
 				E48A0C971CF1FD6A00D31630 /* TngItem.swift */,
 				E48566F21CEF9861003FF85E /* Trainer.swift */,
 			);
@@ -292,14 +289,13 @@
 				E48566F41CEF9861003FF85E /* Trainer.swift in Sources */,
 				E4643A331CDFE54E00811E3C /* MainTableViewController.swift in Sources */,
 				E48A0C901CF08FDA00D31630 /* LotosApi.swift in Sources */,
-				E48566F31CEF9861003FF85E /* Trainer+CoreDataProperties.swift in Sources */,
+				A445D3791D905DCB00C2FFEA /* Database.swift in Sources */,
 				E460E1E51CEB7F98001DAFDC /* NetManager.swift in Sources */,
 				E48A0C951CF09E4B00D31630 /* ImageViewTools.swift in Sources */,
 				E460E1E21CEB7F98001DAFDC /* CoreDataStack.swift in Sources */,
 				E48566ED1CEF8C0D003FF85E /* TrainersTableViewController.swift in Sources */,
 				E460E1E61CEB7F98001DAFDC /* UserDefaultsManager.swift in Sources */,
 				E48A0C931CF09A1D00D31630 /* CustomTableViewCell.swift in Sources */,
-				E48A0C981CF1FD6A00D31630 /* TngItem+CoreDataProperties.swift in Sources */,
 				E4643A1B1CDFE08F00811E3C /* AppDelegate.swift in Sources */,
 				E4643A351CDFE58900811E3C /* AnimationViewController.swift in Sources */,
 				E460E1E41CEB7F98001DAFDC /* FileManager.swift in Sources */,
